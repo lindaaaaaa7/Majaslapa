@@ -1,0 +1,44 @@
+#navigacija{
+    border: 1px solid;
+    width: 100%;
+border-color: rgb(255, 255, 255);
+border-collapse: collapse;
+background-color: rgb(255, 223, 245);
+
+}
+.box4{
+background-color: aqua;
+
+}
+.atels{
+width: 200px;
+background-color: rgb(255, 68, 68);
+
+}
+
+.teksts{
+background-color: blue;
+    width: 200px;
+}
+.box2{
+    display: flex; 
+width: 2000px;
+height: 330px;
+background-color: rgb(189, 106, 4);
+}
+
+.teksts2{
+background-color: rgb(255, 175, 77);
+width: 200px;
+}
+
+.teksts3{
+width: 200px;
+background-color: brown;
+}
+
+.sastavdalas{
+width: 2000px;
+background-color: coral;
+display: flex; 
+}
