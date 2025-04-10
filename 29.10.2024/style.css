@@ -1,0 +1,105 @@
+
+
+
+
+body{
+margin: 10px;
+padding: 20px;
+background-color: pink;
+
+}
+
+#myCanvas{
+
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    }
+
+    #box6{
+    background-color: pink;
+
+        width: 300px;
+    }
+
+
+
+
+
+#navigacija{
+    border: 1px solid;
+    width: 100%;
+border-color: rgb(255, 255, 255);
+border-collapse: collapse;
+background-color: rgb(255, 223, 245);
+
+}
+.box4{
+background-color: rgb(255, 255, 255);
+
+}
+.atels{
+width: 200px;
+background-color: rgb(255, 255, 255);
+
+}
+
+.teksts{
+background-color: rgb(255, 255, 255);
+    width: 200px;
+}
+.box2{
+    display: flex; 
+width: 1400px;
+height: 330px;
+background-color: rgb(255, 255, 255);
+
+}
+
+.teksts2{
+background-color: rgb(255, 255, 255);
+width: 200px;
+
+}
+
+.teksts3{
+width: 200px;
+background-color: rgb(255, 255, 255);
+}
+
+.sastavdalas{
+    display: flex; 
+width: 1462px;
+height: 300px;
+background-color: white;
+display: flex; 
+}
+
+.box8{
+    display: flex; 
+background-color: rgb(255, 255, 255);
+width: 1462px;
+height: 500px;
+}
+.box9{
+width: 300px;
+height: 100px;
+}
+.box10{
+
+    width: 300px;
+background-color: white;
+}
+.atstarpe{
+
+width: 300px;
+
+}
+.sastavdalas1{
+    display: flex; 
+    background-color: white;
+}
+.atstarpe1{
+width: 800px;
+background-color: rgb(255, 255, 255);
+}
