@@ -15,9 +15,12 @@
       const ctx = myCanvas.getContext("2d"); 
   // Funkcija, kas apstrādā kreisās un labās bulttaustiņu nospiešanu, lai pārvietotu pan
       function MyKeyDownHandler (MyEvent) { 
-        if (MyEvent.keyCode == 37 && pan_x > 0) {pan_x = pan_x - 10};  // Kreisā bultiņa (37), pārvieto pan pa kreisi
-        if (MyEvent.keyCode == 39 && pan_x + PanImg.width < myCanvas.width) // Labā bultiņa (39), pārvieto pan pa labi
-            {pan_x = pan_x + 10};
+ if (MyEvent.keyCode == 37 && pan_x > 0) {
+    pan_x = pan_x - 10;
+  }
+  if (MyEvent.keyCode == 39 && pan_x + panWidth < myCanvas.width) {
+    pan_x = pan_x + 10;
+  }
           
       }
  // Kad tiek nospiesta jebkura taustiņš, tiek izsaukta funkcija, lai pārvietotu pan
@@ -106,3 +109,4 @@
     </script>
 </body>
 </html>
+
