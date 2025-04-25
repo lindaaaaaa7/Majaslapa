@@ -1,13 +1,8 @@
 const myCanvas = document.getElementById("myCanvas");
 const ctx = myCanvas.getContext("2d"); 
-function MyKeyDownHandler (MyEvent) { 
-    if (MyEvent.keyCode == 37 && pan_x > 0) {pan_x = pan_x - 10};  // Kreisā bultiņa (37), pārvieto pan pa kreisi
-    if (MyEvent.keyCode == 39 && pan_x + PanImg.width < myCanvas.width) // Labā bultiņa (39), pārvieto pan pa labi
-        {pan_x = pan_x + 10};
-      
-  }
+
 // Kad tiek nospiesta jebkura taustiņš, tiek izsaukta funkcija, lai pārvietotu pan
-  addEventListener("keydown", MyKeyDownHandler); 
+ 
 // pan sākotnējās pozīcijas
   let pan_x = 0;
   let pan_y = 0;
@@ -30,12 +25,20 @@ function MyKeyDownHandler (MyEvent) {
 // Sākotnējais rezultāts
   let score = 0;
 // Funkcija, kas pārbauda, vai pan un cake saskaras
-  function ImagesTouching(x1, y1, img1, x2, y2, img2) {
+  function ImagesTouching(x1, y1, pan, x2, y2, cake) {
      // Pārbauda, vai pan un cake ir pārklāti (jebkura kunkcija saskaras)
-    if (x1 >= x2 + img2.width || x1 + img1.width <= x2) return false;   
-    if (y1 >= y2 + img2.height || y1 + img1.height <= y2) return false; 
+    if (x1 >= x2 + cake.width || x1 + pan.width <= x2) return false;   
+    if (y1 >= y2 + cake.height || y1 + pan.height <= y2) return false; 
     return true;    // Ja tie ir pārklāti, tad atgriež true                                                 
   }
+  function MyKeyDownHandler (MyEvent) { 
+    if (MyEvent.keyCode == 37 && pan_x > 0) {pan_x = pan_x - 10};  // Kreisā bultiņa (37), pārvieto pan pa kreisi
+    if (MyEvent.keyCode == 39 && pan_x + PanImg.width < myCanvas.width) // Labā bultiņa (39), pārvieto pan pa labi
+        {pan_x = pan_x + 10};
+      
+  }
+
+  addEventListener("keydown", MyKeyDownHandler); 
 // Šis ir spēles taimeris, sākotnējais laiks ir 20 sekundes
   let time_remaining = 20;
 // Šī funkcija ir galvenais spēles cikls, kas tiek izpildīts katrā kadru izveidē
@@ -59,6 +62,7 @@ function MyKeyDownHandler (MyEvent) {
       ctx.textAlign = "center";
       ctx.fillText("Game Over", myCanvas.width / 2, myCanvas.height / 2);
       ctx.textAlign = "left";
+      
     }
     else {
          // Samazina atlikušos laiku
